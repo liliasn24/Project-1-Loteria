@@ -1,13 +1,21 @@
-* {
+/* * {
 background: green;
 }
 
 body {
   margin: 0;
   font-family: serif;
-}
+} */
 
-section {
-  display: flex;
-  flex-wrap: wrap;
+.board{
+  border:solid purple;
+  height:300px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+}
+.card{
+  border: solid red;
+
+
 }

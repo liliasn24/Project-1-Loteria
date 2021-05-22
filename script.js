@@ -9,15 +9,26 @@
 // if they do not match display error message for 5 secs and continue playing
 //
 let cardNumber = [];
-const div1 = 1;
-const div2 = 2;
-const div3 = 3;
-const div4 = 4;
-const div5 = 5;
-const div6 = 6;
-const div7 = 7;
-const div8 = 8;
-const div9 = 9;
+const div1 = document.getElementById("card-1");
+console.log(div1);
+const div2 = document.getElementById("card-2");
+const div3 = document.getElementById("card-3");
+const div4 = document.getElementById("card-4");
+const div5 = document.getElementById("card-5");
+const div6 = document.getElementById("card-6");
+const div7 = document.getElementById("card-7");
+const div8 = document.getElementById("card-8");
+const div9 = document.getElementById("card-9");
+
+const startGame = document.getElementById("start");
+console.log(startGame);
+
+const currentCard = document.getElementById("current-card");
+console.log(currentCard);
+
+const checkGame = document.getElementById("win")
+console.log(checkGame);
+
 
 let cards = [
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72570/233068/132430-1024__22756.1606987805.jpg?c=2",
@@ -37,21 +48,19 @@ let cards = [
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72305/110451/132358-1024__24793.1552636820.jpg?c=2"
 ];
 
-let currentCard = 0;
+const loteria = {
+  name: 'Loteria',
+}
 
-const randomCard = cards[Math.floor(Math.random() * cards.length)];
-  console.log(randomCard);
-  currentCard = randomCard;
-  console.log(currentCard);
 
-//   Random card generator
-//   const randomCard = function() {
-//     // const dealer = document.getElementById('dealer');
-//     //   console.log(dealer);
-//     const randomSelection =
-// }
-//   randomCard();
-//
-// const game = function() {
-//
-// }
+startGame.addEventListener('click', (e) => {
+  const randomCard = cards[Math.floor(Math.random() * cards.length)];
+    console.log(randomCard);
+  currentCard.src= randomCard;
+})
+
+const checkResult = function() {
+  if(div1){
+
+  }
+}
