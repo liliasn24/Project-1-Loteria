@@ -41,15 +41,17 @@ let currentCard = 0;
 
 const randomCard = cards[Math.floor(Math.random() * cards.length)];
   console.log(randomCard);
+  currentCard = randomCard;
+  console.log(currentCard);
 
-  // Random card generator
+//   Random card generator
 //   const randomCard = function() {
 //     // const dealer = document.getElementById('dealer');
 //     //   console.log(dealer);
 //     const randomSelection =
 // }
-  // randomCard();
-
+//   randomCard();
+//
 // const game = function() {
 //
 // }
