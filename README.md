@@ -2,7 +2,7 @@
 
 ## Loteria!
 
-> Loteria is like bingo but a little more interactive. It’s a classic Mexican game that has images instead of numbers on the boards. It’s also a fun way to pick up some words in Spanish. Usually, the caller would sing out a riddle (in my game no riddle just a random generated card) and then place a token on your board if you have it. The first player to get 3 tokens in a row and call out “¡Lotería!” wins. In this version of the game, the players lose if they miss 3 cards dealt. 
+> Loteria is like bingo but a little more interactive. It’s a classic Mexican game that has images instead of numbers on the boards. It’s also a fun way to pick up some words in Spanish. Usually, the caller would sing out a riddle (in my game no riddle just a random generated card) and then the players would place a token on their board if they have it. The first player to get 3 tokens in a row and call out “Lotería!” wins. In this version of the game, the players lose if they miss 3 cards dealt. 
 
 
 <!-- 
