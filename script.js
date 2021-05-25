@@ -20,14 +20,14 @@ const div7 = document.getElementById("card-7");
 const div8 = document.getElementById("card-8");
 const div9 = document.getElementById("card-9");
 
-const startGame = document.getElementById("start");
-console.log(startGame);
+const startGameButton = document.getElementById("start");
+
 
 const currentCard = document.getElementById("current-card");
 console.log(currentCard);
 
-const checkGame = document.getElementById("win")
-console.log(checkGame);
+const loteriaButton = document.getElementById("win")
+
 
 
 let cards = [
@@ -52,15 +52,34 @@ const loteria = {
   name: 'Loteria',
 }
 
+let intervalId;
 
-startGame.addEventListener('click', (e) => {
-  const randomCard = cards[Math.floor(Math.random() * cards.length)];
-    console.log(randomCard);
-  currentCard.src= randomCard;
-})
+startGameButton.addEventListener('click', (e) => {
+  intervalId = setInterval(function (){
+    const index = Math.floor(Math.random() * cards.length);
+    const randomCard = cards[index];
+      console.log(randomCard);
+      console.log(cards);
+    currentCard.src= randomCard;
+    cards.splice(index, 1);
+    console.log(cards);
+  }, 1500);
+  // if (cards.length = 0){
+  //   // why it's not stopping?
+  //   clearInterval();
+  // }
+});
 
-const checkResult = function() {
-  if(div1){
 
-  }
-}
+
+
+
+
+//   const index = Math.floor(Math.random() * cards.length)
+//   const randomCard = cards[index];
+//     console.log(randomCard);
+//     console.log(cards);
+//   currentCard.src= randomCard;
+//   cards.splice(index, 1);
+//   console.log(cards);
+// })

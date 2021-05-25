@@ -1,11 +1,12 @@
-/* * {
-background: green;
-}
+
 
 body {
-  margin: 0;
-  font-family: serif;
-} */
+ background-image: url(https://cdn5.vectorstock.com/i/1000x1000/12/24/mexican-fiesta-background-banner-vector-14671224.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ color: white;
+
+}
 
 .board{
   border:solid purple;
@@ -13,9 +14,9 @@ body {
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   grid-template-rows:1fr 1fr 1fr;
+
 }
 .card{
   border: solid red;
-
 
 }
