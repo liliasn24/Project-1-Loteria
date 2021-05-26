@@ -10,7 +10,6 @@
 //
 let cardNumber = [];
 const div1 = document.getElementById("card-1");
-console.log(div1);
 const div2 = document.getElementById("card-2");
 const div3 = document.getElementById("card-3");
 const div4 = document.getElementById("card-4");
@@ -21,12 +20,10 @@ const div8 = document.getElementById("card-8");
 const div9 = document.getElementById("card-9");
 
 const startGameButton = document.getElementById("start");
-
-
 const currentCard = document.getElementById("current-card");
-console.log(currentCard);
-
 const loteriaButton = document.getElementById("win")
+const board = document.getElementById("board");
+// console.log(board);
 
 
 
@@ -48,9 +45,8 @@ let cards = [
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72305/110451/132358-1024__24793.1552636820.jpg?c=2"
 ];
 
-const loteria = {
-  name: 'Loteria',
-}
+
+
 
 let intervalId;
 
@@ -58,17 +54,36 @@ startGameButton.addEventListener('click', (e) => {
   intervalId = setInterval(function (){
     const index = Math.floor(Math.random() * cards.length);
     const randomCard = cards[index];
+
       console.log(randomCard);
       console.log(cards);
     currentCard.src= randomCard;
     cards.splice(index, 1);
-    console.log(cards);
+    // console.log(cards);
   }, 1500);
-  // if (cards.length = 0){
-  //   // why it's not stopping?
-  //   clearInterval();
-  // }
 });
+// =========================================================================================================
+
+board.onclick = function(e) {
+  let target = e.target;
+  console.log(e)
+};
+
+
+
+//   let newArray = [];
+//   if (newArray.length === 0){
+//     // why it's not stopping?
+//     clearInterval(intervalId);
+//
+//
+loteriaButton.addEventListener('click', (e) => {
+      if ('all cards have been displayed code') {
+
+      }
+      alert ('Congratulations you won')
+    })
+
 
 
 

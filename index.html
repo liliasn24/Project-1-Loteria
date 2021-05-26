@@ -12,11 +12,10 @@
       <h2>Loteria is like bingo but a little more interactive. It’s a classic Mexican game that has images instead of numbers on the boards. It’s also a fun way to pick up some words in Spanish.</h2>
       <h3>Instructions</h3>
       <ul>
-        <li>Select a Board</li>
+        <!-- <li>Select a Board</li> -->
         <li>When a card is displayed, check your board for the same image</li>
         <li>Click on the image in your board</li>
-        <li>If you get 3 images in a row, you win!</li>
-        <li>Click the Loteria button</li>
+        <li>Click the Loteria! button if you get 3 images in a row, you win!</li>
         <li>You lose if you miss 2 cards dealt</li>
       </ul>
 
@@ -27,7 +26,30 @@
       <img src="" id="current-card"/>
       </div>
 
-      <div class="board">
+      <table id="board" class="highlight">
+
+        <tr>
+          <td><input type="checkbox" id="card1" name="card1" value="soldier"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72570/233068/132430-1024__22756.1606987805.jpg?c=2"></td>
+          <td><input type="checkbox" id="card2" name="card2" value="hand"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72572/233066/132398-1024__87510.1606987803.jpg?c=2"></td>
+          <td><input type="checkbox" id="card3" name="card3" value="canoe"> <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/76143/116275/138790-1024__29093.1564898446.jpg?c=2"></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="card4" name="card4" value="dandy"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/120455/236974/132415-1024__61899.1607169702.jpg?c=2"></td>
+          <td><input type="checkbox" id="card5" name="card5" value="skull"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/129594/278620/132560-1024__15714.1613554268.jpg?c=2"></td>
+          <td><input type="checkbox" id="card6" name="card6" value="sun"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/81031/121044/145630-1024__57951.1566460855.jpg?c=2"></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="card7" name="card7" value="devil"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72256/110278/132353-1024__35781.1552629616.jpg?c=2"></td>
+          <td><input type="checkbox" id="card8" name="card8" value="rose"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72364/110560/132449-1024__31532.1552640437.jpg?c=2"></td>
+          <td><input type="checkbox" id="card9" name="card9" value="moon"><img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72298/110353/132403-1024__57286.1552629733.jpg?c=2"></td>
+        </tr>
+      </table>
+
+
+
+
+
+      <!-- <div class="board">
         <div id="card-1" class="card">
           <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72570/233068/132430-1024__22756.1606987805.jpg?c=2">
         </div>
@@ -50,12 +72,12 @@
           <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72256/110278/132353-1024__35781.1552629616.jpg?c=2">
         </div>
         <div id="card-8" class="card">
-          <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/113592/183705/139684-1024__27751.1581703264.jpg?c=2">
+          <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72256/110278/132353-1024__35781.1552629616.jpg?c=2">
         </div>
         <div id="card-9" class="card">
           <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72298/110353/132403-1024__57286.1552629733.jpg?c=2">
          </div>
-      </div>
+      </div> -->
 
       <button id="win">Loteria!</button>
       <script src="script.js" charset="utf-8"></script>
