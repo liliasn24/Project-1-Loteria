@@ -8,16 +8,19 @@
 // if they match display win message and ask if user wants to keep playing
 // if they do not match display error message for 5 secs and continue playing
 //
-let cardNumber = [];
-const div1 = document.getElementById("card-1");
-const div2 = document.getElementById("card-2");
-const div3 = document.getElementById("card-3");
-const div4 = document.getElementById("card-4");
-const div5 = document.getElementById("card-5");
-const div6 = document.getElementById("card-6");
-const div7 = document.getElementById("card-7");
-const div8 = document.getElementById("card-8");
-const div9 = document.getElementById("card-9");
+let boardDom = [];
+const card1 = document.getElementById("card-1");
+const card2 = document.getElementById("card-2");
+const card3 = document.getElementById("card-3");
+const card4 = document.getElementById("card-4");
+const card5 = document.getElementById("card-5");
+const card6 = document.getElementById("card-6");
+const card7 = document.getElementById("card-7");
+const card8 = document.getElementById("card-8");
+const card9 = document.getElementById("card-9");
+
+
+
 
 const startGameButton = document.getElementById("start");
 const currentCard = document.getElementById("current-card");
@@ -25,6 +28,10 @@ const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
 // console.log(board);
 
+board.onclick = function(e) {
+  let target = e.target;
+  console.log(e)
+};
 
 
 let cards = [
@@ -46,43 +53,36 @@ let cards = [
 ];
 
 
-
-
 let intervalId;
+let newArray = [];
 
 startGameButton.addEventListener('click', (e) => {
   intervalId = setInterval(function (){
     const index = Math.floor(Math.random() * cards.length);
     const randomCard = cards[index];
 
-      console.log(randomCard);
+      // console.log(randomCard);
       console.log(cards);
     currentCard.src= randomCard;
-    cards.splice(index, 1);
+    let removedCards = cards.splice(index, 1);
     // console.log(cards);
+    console.log(removedCards);
+    newArray.push(removedCards);
+    // console.log(newArray);
   }, 1500);
+
 });
+
+
+function checkGame(){
+  if (){
+
+  }
+
+}
+
 // =========================================================================================================
 
-board.onclick = function(e) {
-  let target = e.target;
-  console.log(e)
-};
-
-
-
-//   let newArray = [];
-//   if (newArray.length === 0){
-//     // why it's not stopping?
-//     clearInterval(intervalId);
-//
-//
-loteriaButton.addEventListener('click', (e) => {
-      if ('all cards have been displayed code') {
-
-      }
-      alert ('Congratulations you won')
-    })
 
 
 
@@ -90,11 +90,12 @@ loteriaButton.addEventListener('click', (e) => {
 
 
 
-//   const index = Math.floor(Math.random() * cards.length)
-//   const randomCard = cards[index];
-//     console.log(randomCard);
-//     console.log(cards);
-//   currentCard.src= randomCard;
-//   cards.splice(index, 1);
-//   console.log(cards);
-// })
+function win () {
+  loteriaButton.addEventListener('click', (e) => {
+        alert ('Congratulations you won')
+      })
+}
+win();
+// loteriaButton.addEventListener('click', (e) => {
+//       alert ('Congratulations you won')
+//     })
