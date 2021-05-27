@@ -8,18 +8,30 @@
 // if they match display win message and ask if user wants to keep playing
 // if they do not match display error message for 5 secs and continue playing
 //
-let boardDom = [];
-const card1 = document.getElementById("card-1");
-const card2 = document.getElementById("card-2");
-const card3 = document.getElementById("card-3");
-const card4 = document.getElementById("card-4");
-const card5 = document.getElementById("card-5");
-const card6 = document.getElementById("card-6");
-const card7 = document.getElementById("card-7");
-const card8 = document.getElementById("card-8");
-const card9 = document.getElementById("card-9");
 
+// const card1 = document.getElementById("card1");
+// const card2 = document.getElementById("card2");
+// const card3 = document.getElementById("card3");
+// const card4 = document.getElementById("card4");
+// const card5 = document.getElementById("card5");
+// console.log(card5);
+// const card6 = document.getElementById("card6");
+// const card7 = document.getElementById("card7");
+// const card8 = document.getElementById("card8");
+// const card9 = document.getElementById("card9");
 
+let boardDom = {
+  card1: document.getElementById("card1"),
+  card2: document.getElementById("card2"),
+  card3: document.getElementById("card3"),
+  card4: document.getElementById("card4"),
+  card5: document.getElementById("card5"),
+  card6: document.getElementById("card6"),
+  card7: document.getElementById("card7"),
+  card8: document.getElementById("card8"),
+  card9: document.getElementById("card9"),
+}
+console.log(boardDom.card1);
 
 
 const startGameButton = document.getElementById("start");
@@ -28,10 +40,7 @@ const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
 // console.log(board);
 
-board.onclick = function(e) {
-  let target = e.target;
-  console.log(e)
-};
+
 
 
 let cards = [
@@ -53,8 +62,9 @@ let cards = [
 ];
 
 
+
 let intervalId;
-let newArray = [];
+const newArray = [];
 
 startGameButton.addEventListener('click', (e) => {
   intervalId = setInterval(function (){
@@ -62,31 +72,46 @@ startGameButton.addEventListener('click', (e) => {
     const randomCard = cards[index];
 
       // console.log(randomCard);
-      console.log(cards);
+      // console.log(cards, 'line 74');
     currentCard.src= randomCard;
     let removedCards = cards.splice(index, 1);
-    // console.log(cards);
-    console.log(removedCards);
-    newArray.push(removedCards);
+    // // console.log(cards);
+    // console.log(removedCards);
+    newArray.push(removedCards[0]);
+    console.log(newArray);
+    console.log(intervalId);
+    if (newArray.length === 14){
+      // why it's not stopping?
+      clearInterval(intervalId);
+    }
     // console.log(newArray);
   }, 1500);
 
 });
 
+// if (newArray.length === 12){
+//   // why it's not stopping?
+//   clearInterval(intervalId);
 
-function checkGame(){
-  if (){
 
-  }
-
+const userClicks = board.onclick = function(e) {
+  let target = e.target;
+  console.log(target)
+  console.log(`user clicked ${e.target}`)
 }
 
+// if (userClicks === true) {
+//   console.log("user is clicking")
+// }
+// function checkGame(){
+//   if (userClicks ===  true){
+//     console.log('user clicked')
+//   }
+// }
+//
+// checkGame();
+
 // =========================================================================================================
-
-
-
-
-
 
 
 

@@ -16,15 +16,17 @@ table, td, tr{
   border: 5px solid black;
 }
 
-
+#card1, #card2, #card3 {
+  width: 33%;
+  height: 33%;
+}
 .board{
   border:solid purple;
-  /* height:100px;
-  width: 100px; */
+  height:100px;
+  width: 100px;
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   grid-template-rows:1fr 1fr 1fr;
-
 }
 
 .board:hover{
