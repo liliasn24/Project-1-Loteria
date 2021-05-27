@@ -16,9 +16,13 @@ table, td, tr{
   border: 5px solid black;
 }
 
-#card1, #card2, #card3 {
-  width: 33%;
-  height: 33%;
+#current-card {
+  width: 200px;
+  height: 200px;
+}
+.cards {
+  width: 200px;
+  height: 200px;
 }
 .board{
   border:solid purple;
@@ -37,33 +41,30 @@ table, td, tr{
 } */
 
 #start{
-  width: 200px;
-  height: 100px;
+  width: 140px;
+  height: 50px;
   border: black;
   color: white;
   background-color: #e4007c;
-  border-radius: 20px;
-  font-size: 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   text-align: center;
   align-items: center;
 }
 
 #win{
   display: center;
-  width: 200px;
-  height: 100px;
+  width: 110px;
+  height: 50px;
   border: black;
   color: white;
   background-color: #e4007c;
-  border-radius: 20px;
-  font-size: 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   align-items: center;
   letter-spacing: 5px;
-}
-#card1 {
-height: 20%;
 }

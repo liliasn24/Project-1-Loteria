@@ -70,34 +70,26 @@ startGameButton.addEventListener('click', (e) => {
   intervalId = setInterval(function (){
     const index = Math.floor(Math.random() * cards.length);
     const randomCard = cards[index];
-
       // console.log(randomCard);
-      // console.log(cards, 'line 74');
     currentCard.src= randomCard;
     let removedCards = cards.splice(index, 1);
     // // console.log(cards);
     // console.log(removedCards);
     newArray.push(removedCards[0]);
-    console.log(newArray);
-    console.log(intervalId);
+    // console.log(newArray);
+    // console.log(intervalId);
     if (newArray.length === 14){
-      // why it's not stopping?
       clearInterval(intervalId);
     }
-    // console.log(newArray);
   }, 1500);
-
 });
 
-// if (newArray.length === 12){
-//   // why it's not stopping?
-//   clearInterval(intervalId);
 
 
 const userClicks = board.onclick = function(e) {
   let target = e.target;
   console.log(target)
-  console.log(`user clicked ${e.target}`)
+  console.log(`user clicked ${target}`)
 }
 
 // if (userClicks === true) {
