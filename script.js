@@ -33,7 +33,14 @@ let boardDom = [
     card8: document.getElementById("card8"),
     card9: document.getElementById("card9"),
   },
-]
+];
+
+for(let i = 0; i < boardDom.length; i++) {
+  let currentRow = boardDom[i];
+  for (let key in currentRow) {
+    console.log(boardDom[i][key]);
+  }
+}
 
 // const row1 = boardDom[0];
 // console.log(row1);
@@ -41,17 +48,25 @@ let boardDom = [
 // console.log(cards1);
 
 
-const userClicks = board.onclick = function(e) {
+
+  const userClicks = board.onclick = function(e) {
   let target = e.target;
   // console.log(target)
+
+
+
+
   if (target === boardDom[0].card1) {
-      console.log("user clicked card1");
+      // console.log("user clicked card1");
   } if (target === boardDom[0].card2) {
-    console.log("user clicked card2");
+    // console.log("user clicked card2");
   } if (target === boardDom[0].card3) {
-    console.log("user clicked card3");
+    // console.log("user clicked card3");
   }
 }
+
+
+
 
 
 
