@@ -9,16 +9,13 @@
 // if they do not match display error message for 5 secs and continue playing
 //
 
-// const card1 = document.getElementById("card1");
-// const card2 = document.getElementById("card2");
-// const card3 = document.getElementById("card3");
-// const card4 = document.getElementById("card4");
-// const card5 = document.getElementById("card5");
-// console.log(card5);
-// const card6 = document.getElementById("card6");
-// const card7 = document.getElementById("card7");
-// const card8 = document.getElementById("card8");
-// const card9 = document.getElementById("card9");
+
+const startGameButton = document.getElementById("start");
+const currentCard = document.getElementById("current-card");
+currentCard.classList.add("display");
+const loteriaButton = document.getElementById("win")
+const board = document.getElementById("board");
+// console.log(board);
 
 let boardDom = [
   {
@@ -38,19 +35,27 @@ let boardDom = [
   },
 ]
 
-const cards1 = boardDom[0].card1;
-console.log(cards1);
+// const row1 = boardDom[0];
+// console.log(row1);
+// const cards1 = boardDom[0].card1;
+// console.log(cards1);
 
 
 const userClicks = board.onclick = function(e) {
   let target = e.target;
-  console.log(target)
-  console.log(`user clicked ${target}`)
+  // console.log(target)
+  if (target === boardDom[0].card1) {
+      console.log("user clicked card1");
+  } if (target === boardDom[0].card2) {
+    console.log("user clicked card2");
+  } if (target === boardDom[0].card3) {
+    console.log("user clicked card3");
+  }
 }
 
-// if (userClicks === true) {
-//   console.log("user is clicking")
-// }
+
+
+
 // function checkGame(){
 //   if (userClicks ===  true){
 //     console.log('user clicked')
@@ -61,12 +66,7 @@ const userClicks = board.onclick = function(e) {
 
 
 
-const startGameButton = document.getElementById("start");
-const currentCard = document.getElementById("current-card");
-currentCard.classList.add("display");
-const loteriaButton = document.getElementById("win")
-const board = document.getElementById("board");
-// console.log(board);
+
 
 
 
