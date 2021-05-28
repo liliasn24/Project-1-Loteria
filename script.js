@@ -20,22 +20,50 @@
 // const card8 = document.getElementById("card8");
 // const card9 = document.getElementById("card9");
 
-let boardDom = {
-  card1: document.getElementById("card1"),
-  card2: document.getElementById("card2"),
-  card3: document.getElementById("card3"),
-  card4: document.getElementById("card4"),
-  card5: document.getElementById("card5"),
-  card6: document.getElementById("card6"),
-  card7: document.getElementById("card7"),
-  card8: document.getElementById("card8"),
-  card9: document.getElementById("card9"),
+let boardDom = [
+  {
+    card1: document.getElementById("card1"),
+    card2: document.getElementById("card2"),
+    card3: document.getElementById("card3"),
+  },
+  {
+    card4: document.getElementById("card4"),
+    card5: document.getElementById("card5"),
+    card6: document.getElementById("card6"),
+  },
+  {
+    card7: document.getElementById("card7"),
+    card8: document.getElementById("card8"),
+    card9: document.getElementById("card9"),
+  },
+]
+
+const cards1 = boardDom[0].card1;
+console.log(cards1);
+
+
+const userClicks = board.onclick = function(e) {
+  let target = e.target;
+  console.log(target)
+  console.log(`user clicked ${target}`)
 }
-console.log(boardDom.card1);
+
+// if (userClicks === true) {
+//   console.log("user is clicking")
+// }
+// function checkGame(){
+//   if (userClicks ===  true){
+//     console.log('user clicked')
+//   }
+// }
+//
+// checkGame();
+
 
 
 const startGameButton = document.getElementById("start");
 const currentCard = document.getElementById("current-card");
+currentCard.classList.add("display");
 const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
 // console.log(board);
@@ -86,22 +114,9 @@ startGameButton.addEventListener('click', (e) => {
 
 
 
-const userClicks = board.onclick = function(e) {
-  let target = e.target;
-  console.log(target)
-  console.log(`user clicked ${target}`)
-}
 
-// if (userClicks === true) {
-//   console.log("user is clicking")
-// }
-// function checkGame(){
-//   if (userClicks ===  true){
-//     console.log('user clicked')
-//   }
-// }
-//
-// checkGame();
+
+
 
 // =========================================================================================================
 

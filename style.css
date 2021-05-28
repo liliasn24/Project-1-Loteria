@@ -16,29 +16,16 @@ table, td, tr{
   border: 5px solid black;
 }
 
-#current-card {
+.display{
   width: 200px;
   height: 200px;
-}
-.cards {
-  width: 200px;
-  height: 200px;
-}
-.board{
-  border:solid purple;
-  height:100px;
-  width: 100px;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows:1fr 1fr 1fr;
 }
 
-.board:hover{
-  background-color: red;
+.cards {
+  width: 150px;
+  height: 150px;
 }
-/* .cards: hover {
-  background-color: black;
-} */
+
 
 #start{
   width: 140px;
