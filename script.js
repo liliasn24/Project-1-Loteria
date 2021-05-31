@@ -17,6 +17,9 @@ const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
 // console.log(board);
 
+
+
+
 let boardDom = [
   {
     card1: document.getElementById("card1"),
@@ -35,12 +38,62 @@ let boardDom = [
   },
 ];
 
-for(let i = 0; i < boardDom.length; i++) {
-  let currentRow = boardDom[i];
-  for (let key in currentRow) {
-    console.log(boardDom[i][key]);
-  }
+const userClicks = board.onclick = function(e) {
+let target = e.target;
+console.log(target);
+// if (target === boardDom[0].card1) {
+//     console.log("user clicked card1");
+// }
+// if (target === boardDom[0].card2) {
+//     console.log("user clicked card2");
+// }}
+
+
+if(target === boardDom[0].card1) {
+    console.log("you have one card in a row");
+} if(target === boardDom[0].card2) {
+  console.log("you have two cards in a row");
+} if(target === boardDom[0].card3) {
+  console.log("you have three cards in a row");
+} if(target === boardDom[1].card4) {
+  console.log("you have four cards in a row");
 }
+
+}
+
+// if (target === boardDom[0].card4) {
+//     alert ("you have one card in a row");
+// } if (target === boardDom[0].card5) {
+//   console.log("you have two cards in a row");
+// } if (target === boardDom[0].card6) {
+//   console.log("you have three cards in a row");
+// }
+//
+//
+//
+// if (target === boardDom[0].card6) {
+//     alert ("you have one card in a row");
+// } if (target === boardDom[0].card7) {
+//   console.log("you have two cards in a row");
+// } if (target === boardDom[0].card8) {
+//   console.log("you have three cards in a row");
+// }
+// }
+
+
+
+// for(let i = 0; i < boardDom.length; i++) {
+//   let currentRow = boardDom[i];
+//   for (let key in currentRow) {
+//     // console.log(boardDom[i][key]);
+//     if (boardDom[i][key] === userClicks) {
+//       console.log('You won');
+//     }
+//       else {
+//         console.log('Not yet')
+//       }
+//     }
+//   }
 
 // const row1 = boardDom[0];
 // console.log(row1);
@@ -49,21 +102,12 @@ for(let i = 0; i < boardDom.length; i++) {
 
 
 
-  const userClicks = board.onclick = function(e) {
-  let target = e.target;
-  // console.log(target)
 
 
 
 
-  if (target === boardDom[0].card1) {
-      // console.log("user clicked card1");
-  } if (target === boardDom[0].card2) {
-    // console.log("user clicked card2");
-  } if (target === boardDom[0].card3) {
-    // console.log("user clicked card3");
-  }
-}
+
+
 
 
 

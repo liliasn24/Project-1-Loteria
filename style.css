@@ -11,6 +11,7 @@ body {
 
 }
 table, td, tr{
+  margin-left: 150px;
   height: 10%;
   width: 10%;
   border: 5px solid black;
@@ -19,6 +20,7 @@ table, td, tr{
 .display{
   width: 200px;
   height: 200px;
+  margin-left: 310px;
 }
 
 .cards {
@@ -28,6 +30,8 @@ table, td, tr{
 
 
 #start{
+  display: block;
+  margin-left: 350px;
   width: 140px;
   height: 50px;
   border: black;
@@ -42,7 +46,24 @@ table, td, tr{
 }
 
 #win{
-  display: center;
+  display: block;
+  margin-left: 350px;
+  width: 110px;
+  height: 50px;
+  border: black;
+  color: white;
+  background-color: #e4007c;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 5px;
+}
+
+#restart{
+  display: inline-block;
+  margin: 50px 0px 0px 350px;
   width: 110px;
   height: 50px;
   border: black;
