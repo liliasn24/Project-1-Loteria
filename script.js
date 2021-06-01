@@ -9,110 +9,49 @@
 // if they do not match display error message for 5 secs and continue playing
 //
 
-
 const startGameButton = document.getElementById("start");
 const currentCard = document.getElementById("current-card");
 currentCard.classList.add("display");
 const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
 // console.log(board);
+const weHaveThisCard = "X"
 
+const mainBoard = [
+  document.getElementById("card1").src,
+  document.getElementById("card2").src,
+  document.getElementById("card3").src,
+  document.getElementById("card4").src,
+  document.getElementById("card5").src,
+  document.getElementById("card6").src,
+  document.getElementById("card7").src,
+  document.getElementById("card8").src,
+  document.getElementById("card9").src,
+]
+ //===================THIS WORKS! ===========
+// const winner = function () {
+//   console.log("You won 3 in a row horizontally")
+// }
+//
+// const userClicks = board.onclick = function(e) {
+// let target = e.target.src;
+// const cardTarget = e.target.id;
+// if(mainBoard[0] === target){
+//   console.log('user clicked card 1');
+// }
+// if(mainBoard[1] === target){
+//   console.log('user clicked card 2');
+// }
+// if(mainBoard[2] === target){
+//   console.log('user clicked card 3');
+//  return winner();
+// }
+// }
 
-
-
-let boardDom = [
-  {
-    card1: document.getElementById("card1"),
-    card2: document.getElementById("card2"),
-    card3: document.getElementById("card3"),
-  },
-  {
-    card4: document.getElementById("card4"),
-    card5: document.getElementById("card5"),
-    card6: document.getElementById("card6"),
-  },
-  {
-    card7: document.getElementById("card7"),
-    card8: document.getElementById("card8"),
-    card9: document.getElementById("card9"),
-  },
-];
+// ==============================================
 
 const userClicks = board.onclick = function(e) {
-let target = e.target;
-console.log(target);
-// if (target === boardDom[0].card1) {
-//     console.log("user clicked card1");
-// }
-// if (target === boardDom[0].card2) {
-//     console.log("user clicked card2");
-// }}
-
-
-if(target === boardDom[0].card1) {
-    console.log("you have one card in a row");
-} if(target === boardDom[0].card2) {
-  console.log("you have two cards in a row");
-} if(target === boardDom[0].card3) {
-  console.log("you have three cards in a row");
-} if(target === boardDom[1].card4) {
-  console.log("you have four cards in a row");
-}
-
-}
-
-// if (target === boardDom[0].card4) {
-//     alert ("you have one card in a row");
-// } if (target === boardDom[0].card5) {
-//   console.log("you have two cards in a row");
-// } if (target === boardDom[0].card6) {
-//   console.log("you have three cards in a row");
-// }
-//
-//
-//
-// if (target === boardDom[0].card6) {
-//     alert ("you have one card in a row");
-// } if (target === boardDom[0].card7) {
-//   console.log("you have two cards in a row");
-// } if (target === boardDom[0].card8) {
-//   console.log("you have three cards in a row");
-// }
-// }
-
-
-
-// for(let i = 0; i < boardDom.length; i++) {
-//   let currentRow = boardDom[i];
-//   for (let key in currentRow) {
-//     // console.log(boardDom[i][key]);
-//     if (boardDom[i][key] === userClicks) {
-//       console.log('You won');
-//     }
-//       else {
-//         console.log('Not yet')
-//       }
-//     }
-//   }
-
-// const row1 = boardDom[0];
-// console.log(row1);
-// const cards1 = boardDom[0].card1;
-// console.log(cards1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let target = e.target.src;
 
 
 // function checkGame(){
