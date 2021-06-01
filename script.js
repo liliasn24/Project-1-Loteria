@@ -14,62 +14,118 @@ const currentCard = document.getElementById("current-card");
 currentCard.classList.add("display");
 const loteriaButton = document.getElementById("win")
 const board = document.getElementById("board");
-// console.log(board);
-const weHaveThisCard = "X"
 
 const mainBoard = [
-  document.getElementById("card1").src,
-  document.getElementById("card2").src,
-  document.getElementById("card3").src,
-  document.getElementById("card4").src,
-  document.getElementById("card5").src,
-  document.getElementById("card6").src,
-  document.getElementById("card7").src,
-  document.getElementById("card8").src,
-  document.getElementById("card9").src,
+  document.getElementById("1").id,
+  document.getElementById("2").id,
+  document.getElementById("3").id,
+  document.getElementById("4").id,
+  document.getElementById("5").id,
+  document.getElementById("6").id,
+  document.getElementById("7").id,
+  document.getElementById("8").id,
+  document.getElementById("9").id,
 ]
- //===================THIS WORKS! ===========
+// console.log(mainBoard[0]);
+//
+//  //===================THIS WORKS! ===========
 // const winner = function () {
-//   console.log("You won 3 in a row horizontally")
+//   console.log("You won")
 // }
-//
-// const userClicks = board.onclick = function(e) {
-// let target = e.target.src;
-// const cardTarget = e.target.id;
-// if(mainBoard[0] === target){
-//   console.log('user clicked card 1');
-// }
-// if(mainBoard[1] === target){
-//   console.log('user clicked card 2');
-// }
-// if(mainBoard[2] === target){
-//   console.log('user clicked card 3');
-//  return winner();
-// }
-// }
+const array = [];
+const array2 = [];
+const array3 = [];
 
-// ==============================================
+const userClicks = (e) => {
+  const id = e.target.id;
 
-const userClicks = board.onclick = function(e) {
-// let target = e.target.src;
+  if (id === mainBoard[0]) {
+      array.push(id);
+      console.log(`this is card 1 ${id}`);
+      console.log(array);
+    }
 
+    if (id === mainBoard[1]) {
+        array.push(id);
+        console.log(`this is card 2 ${id}`);
+        console.log(array);
+      }
 
-// function checkGame(){
-//   if (userClicks ===  true){
-//     console.log('user clicked')
-//   }
-// }
-//
-// checkGame();
+      if (id === mainBoard[2]) {
+          array.push(id);
+          console.log(`this is card 3 ${id}`);
+          console.log(array);
+        }
 
-
-
+if (array.length == 3) {
+  win();
+} else {
+  console.log('Not yet')
+}
 
 
+if (id === mainBoard[3]) {
+    array2.push(id);
+    console.log(`this is card 4 ${id}`);
+    console.log(array2);
+  }
+
+  if (id === mainBoard[4]) {
+      array2.push(id);
+      console.log(`this is card 5 ${id}`);
+      console.log(array2);
+    }
+
+    if (id === mainBoard[5]) {
+        array2.push(id);
+        console.log(`this is card 6 ${id}`);
+        console.log(array2);
+      }
+
+if (array2.length == 3) {
+    win();
+  } else {
+    console.log('Not yet')
+  }
+
+  if (id === mainBoard[6]) {
+      array3.push(id);
+      console.log(`this is card 7 ${id}`);
+      console.log(array3);
+    }
+
+    if (id === mainBoard[7]) {
+        array3.push(id);
+        console.log(`this is card 8 ${id}`);
+        console.log(array3);
+      }
+
+      if (id === mainBoard[8]) {
+          array3.push(id);
+          console.log(`this is card 9 ${id}`);
+          console.log(array3);
+        }
+
+  if (array3.length == 3) {
+      win();
+    } else {
+      console.log('Not yet')
+    }
+
+}
+
+const domBoard = board.addEventListener('click', userClicks);
 
 
 
-let cards = [
+function win () {
+  loteriaButton.addEventListener('click', (e) => {
+        alert ('Congratulations you won')
+      })
+}
+
+
+const cards = [
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/72570/233068/132430-1024__22756.1606987805.jpg?c=2",
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/76143/116275/138790-1024__29093.1564898446.jpg?c=2",
   "https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/608x608/products/104688/240108/163822-1024__36211.1607450439.jpg?c=2",
@@ -117,15 +173,3 @@ startGameButton.addEventListener('click', (e) => {
 
 
 // =========================================================================================================
-
-
-
-function win () {
-  loteriaButton.addEventListener('click', (e) => {
-        alert ('Congratulations you won')
-      })
-}
-win();
-// loteriaButton.addEventListener('click', (e) => {
-//       alert ('Congratulations you won')
-//     })
