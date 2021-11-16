@@ -1,8 +1,11 @@
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
 body {
  /* background-image: url(https://t3.ftcdn.net/jpg/02/57/18/36/240_F_257183697_Y8rZTMZT27aftJH18h0zsC7qAWUTERtd.jpg); */
  background-color: black;
+ font-family: 'Indie Flower', cursive;
  background-size: cover;
  background-repeat: no-repeat;
  color: white;
